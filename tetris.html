@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3Dテトリス | 有限書庫</title>
+
+    <style>
+
+        body {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+            font-family: sans-serif;
+            line-height: 1.8;
+            color: white;
+            background: #111;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* テトリス棒背景 */
+
+        .falling-block {
+            position: fixed;
+            top: -150px;
+            width: 30px;
+            height: 120px;
+            background: cyan;
+            opacity: 0.15;
+            z-index: -1;
+            animation: fall 8s linear infinite;
+        }
+
+        .block1 {
+            left: 15%;
+            animation-delay: 0s;
+        }
+
+        .block2 {
+            left: 45%;
+            animation-delay: 2s;
+        }
+
+        .block3 {
+            left: 75%;
+            animation-delay: 4s;
+        }
+
+        @keyframes fall {
+            from {
+                transform: translateY(-150px);
+            }
+
+            to {
+                transform: translateY(120vh);
+            }
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        nav a {
+            color: cyan;
+            margin: 0 10px;
+        }
+
+        section {
+            margin-top: 50px;
+        }
+
+        h2 {
+            border-bottom: 1px solid #444;
+            padding-bottom: 5px;
+        }
+
+        .screenshot {
+
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+
+            margin: auto;
+
+            border: 2px dashed #666;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #888;
+
+            background: #222;
+        }
+
+        .info-box {
+
+            background: #1b1b1b;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="falling-block block1"></div>
+    <div class="falling-block block2"></div>
+    <div class="falling-block block3"></div>
+
+    <header>
+
+        <h1>3Dテトリス</h1>
+
+        <p>
+            有限書庫 最初の完成作品
+        </p>
+
+        <nav>
+            <a href="./index.html">TOP</a>
+            <a href="./works.html">作品集</a>
+        </nav>
+
+    </header>
+
+    <section>
+
+        <h2>スクリーンショット</h2>
+
+        <div class="screenshot">
+
+            スクリーンショットをここに配置
+
+            <!--
+            後でこう差し替える
+
+            <img src="./images/tetris01.png" width="100%">
+            -->
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>概要</h2>
+
+        <p>
+            プログラミング学習開始から約1か月のタイミングで制作した、
+            「3Dパズル」と「RPG」を組み合わせた試作ゲームです。
+        </p>
+
+        <p>
+            3D空間でテトリスを行いながら、
+            敵との戦闘や成長要素を組み合わせることを目標に制作しました。
+        </p>
+
+        <p>
+            現在見ると拙い部分も多くありますが、
+            個人開発を始めて最初の完成作品であり、
+            ゲーム制作の基礎を学ぶきっかけとなった作品です。
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>作品情報</h2>
+
+        <div class="info-box">
+
+            <p><strong>ジャンル：</strong>3DパズルRPG</p>
+            <p><strong>開発期間：</strong>約1か月</p>
+            <p><strong>制作時期：</strong>ゲーム開発学習1か月目</p>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>使用技術</h2>
+
+        <ul>
+            <li>C++</li>
+            <li>DxLib</li>
+            <li>Visual Studio</li>
+        </ul>
+
+    </section>
+
+    <section>
+
+        <h2>制作で学んだこと</h2>
+
+        <ul>
+
+            <li>Visual Studioの導入</li>
+            <li>C++プロジェクトの作成方法</li>
+            <li>コンソールアプリからゲーム画面への移行</li>
+            <li>DxLibの導入方法</li>
+            <li>2D描画の基礎</li>
+            <li>3D描画の基礎</li>
+            <li>日本語フォント表示時のトラブル対応</li>
+
+        </ul>
+
+    </section>
+
+    <section>
+
+        <h2>今後の改善点</h2>
+
+        <ul>
+
+            <li>敵の種類追加</li>
+            <li>クエストシステムの実装</li>
+            <li>アイテムの種類追加</li>
+            <li>ゲームバランス調整</li>
+            <li>3D空間の演出強化</li>
+
+        </ul>
+
+    </section>
+
+    <section>
+
+        <h2>ひとこと</h2>
+
+        <p>
+            有限書庫の最初の完成作品。
+            ここから個人ゲーム開発の活動を開始しました。
+        </p>
+
+    </section>
+
+</body>
+
+</html>
