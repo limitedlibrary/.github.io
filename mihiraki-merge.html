@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>見開き結合くん Ultimate Plus</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <style>
+        body { font-family: sans-serif; background: #f0f2f5; text-align: center; padding: 20px; }
+        #drop-zone {
+            border: 3px dashed #3498db; border-radius: 15px; padding: 40px;
+            background: white; cursor: pointer; margin-bottom: 20px;
+        }
+        .controls { background: white; padding: 20px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 15px; margin-top: 20px; }
+        .item { background: white; padding: 15px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .item img { max-width: 100%; height: auto; border: 1px solid #ddd; margin-bottom: 10px; border-radius: 4px; }
+        .btn-row { display: flex; gap: 4px; justify-content: center; flex-wrap: wrap; }
+        button { padding: 8px 12px; cursor: pointer; border: none; border-radius: 5px; color: white; font-weight: bold; font-size: 12px; transition: 0.2s; }
+        .swap-btn { background: #f39c12; flex: 2; }
+        .rotate-btn-l { background: #9b59b6; flex: 1; }
+        .rotate-btn-r { background: #8e44ad; flex: 1; }
+        button:hover { opacity: 0.8; }
+        #zip-btn { background: #27ae60; display: none; margin-top: 20px; padding: 15px 40px; font-size: 18px; box-shadow: 0 4px 10px rgba(39,174,96,0.3); }
+    </style>
+</head>
+<body>
+
+    <h2>📖 見開き結合くん Ultimate Plus</h2>
+
+    <div class="controls">
+        <label><input type="checkbox" id="resize-check" checked> 50%サイズに縮小</label>
+        <label style="margin-left: 20px;"><input type="checkbox" id="global-swap"> デフォルトを右開き（入替）にする</label>
+    </div>
+
+    <div id="drop-zone">ここに画像をまとめてドロップ！</div>
+    <input type="file" id="file-input" accept="image/*" multiple style="display:none;">
+
+    <div id="preview-grid" class="grid"></div>
+    <button id="zip-btn">🎁 ZIPでまとめて保存</button>
+
+    <canvas id="canvas" style="display:none;"></canvas>
+
+    <script>
+        const dropZone = document.getElementById('drop-zone');
+        const fileInput = document.getElementById('file-input');
+        const previewGrid = document.getElementById('preview-grid');
+        const zipBtn = document.getElementById('zip-btn');
+        const resizeCheck = document.getElementById('resize-check');
+        const globalSwap = document.getElementById('global-swap');
+
+        let pairs = []; 
+
+        dropZone.onclick = () => fileInput.click();
+        dropZone.ondragover = (e) => { e.preventDefault(); dropZone.style.background = "#e1f5fe"; };
+        dropZone.ondragleave = () => dropZone.style.background = "white";
+        dropZone.ondrop = (e) => { e.preventDefault(); dropZone.style.background = "white"; handleFiles(e.dataTransfer.files); };
+        fileInput.onchange = (e) => handleFiles(e.target.files);
+
+        async function handleFiles(files) {
+            const fileList = Array.from(files).sort((a, b) => a.name.localeCompare(b.name, undefined, {numeric: true}));
+            if (fileList.length < 2) return alert('2枚以上選んでください');
+            pairs = [];
+            for (let i = 0; i < fileList.length; i += 2) {
+                if (!fileList[i + 1]) break;
+                const img1 = await loadImage(fileList[i]);
+                const img2 = await loadImage(fileList[i + 1]);
+                pairs.push({ img1, img2, swapped: globalSwap.checked, rotation: 0 });
+            }
+            renderAll();
+            zipBtn.style.display = 'inline-block';
+        }
+
+        function loadImage(file) {
+            return new Promise(resolve => {
+                const img = new Image();
+                img.onload = () => resolve(img);
+                img.src = URL.createObjectURL(file);
+            });
+        }
+
+        function renderAll() {
+            previewGrid.innerHTML = '';
+            pairs.forEach((pair, index) => {
+                const dataUrl = mergeImages(pair);
+                const div = document.createElement('div');
+                div.className = 'item';
+                div.innerHTML = `
+                    <img src="${dataUrl}">
+                    <div class="btn-row">
+                        <button class="rotate-btn-l" onclick="updatePair(${index}, 'rotate-l')">↩️ -90°</button>
+                        <button class="swap-btn" onclick="updatePair(${index}, 'swap')">🔄 左右入替</button>
+                        <button class="rotate-btn-r" onclick="updatePair(${index}, 'rotate-r')">↪️ +90°</button>
+                    </div>
+                `;
+                previewGrid.appendChild(div);
+            });
+        }
+
+        window.updatePair = (index, type) => {
+            if (type === 'swap') pairs[index].swapped = !pairs[index].swapped;
+            if (type === 'rotate-r') pairs[index].rotation = (pairs[index].rotation + 1) % 4;
+            if (type === 'rotate-l') pairs[index].rotation = (pairs[index].rotation + 3) % 4; // -90度は+270度と同じ
+            renderAll();
+        };
+
+        function mergeImages(pair) {
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+            const scale = resizeCheck.checked ? 0.5 : 1;
+            const a = pair.swapped ? pair.img2 : pair.img1;
+            const b = pair.swapped ? pair.img1 : pair.img2;
+
+            let combinedW = (a.width + b.width) * scale;
+            let combinedH = Math.max(a.height, b.height) * scale;
+
+            const isVertical = pair.rotation % 2 !== 0;
+            canvas.width = isVertical ? combinedH : combinedW;
+            canvas.height = isVertical ? combinedW : combinedH;
+
+            ctx.save();
+            ctx.translate(canvas.width / 2, canvas.height / 2);
+            ctx.rotate((pair.rotation * 90) * Math.PI / 180);
+            ctx.drawImage(a, -combinedW / 2, -combinedH / 2, a.width * scale, a.height * scale);
+            ctx.drawImage(b, (-combinedW / 2) + (a.width * scale), -combinedH / 2, b.width * scale, b.height * scale);
+            ctx.restore();
+            return canvas.toDataURL('image/png');
+        }
+
+zipBtn.onclick = async () => {
+            const zip = new JSZip();
+            
+            // 現在の日時を取得してフォーマット (YYYYMMDDHHMM)
+            const now = new Date();
+            const timestamp = now.getFullYear() +
+                String(now.getMonth() + 1).padStart(2, '0') +
+                String(now.getDate()).padStart(2, '0') +
+                String(now.getHours()).padStart(2, '0') +
+                String(now.getMinutes()).padStart(2, '0');
+
+            pairs.forEach((pair, i) => {
+                const dataUrl = mergeImages(pair);
+                // 画像ファイル名：spread202602212051_001.png
+                const fileName = `spread${timestamp}_${String(i + 1).padStart(3, '0')}.png`;
+                zip.file(fileName, dataUrl.split(',')[1], {base64: true});
+            });
+
+            const content = await zip.generateAsync({type: "blob"});
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(content);
+            
+            // ZIPファイル名も日時に合わせる
+            link.download = `spread${timestamp}_archive.zip`;
+            link.click();
+        };
+    </script>
+</body>
+</html>
