@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3Dシューティング | 有限書庫</title>
+
+    <style>
+        body {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+            font-family: sans-serif;
+            line-height: 1.8;
+            color: white;
+            background: #111;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .bullet {
+            position: fixed;
+            left: -120px;
+            width: 100px;
+            height: 4px;
+            background: orange;
+            opacity: 0.2;
+            z-index: -1;
+            animation: shoot 5s linear infinite;
+        }
+
+        .bullet1 {
+            top: 20%;
+            animation-delay: 0s;
+        }
+
+        .bullet2 {
+            top: 45%;
+            animation-delay: 1.5s;
+        }
+
+        .bullet3 {
+            top: 70%;
+            animation-delay: 3s;
+        }
+
+        .bullet4 {
+            top: 85%;
+            animation-delay: 4s;
+        }
+
+        @keyframes shoot {
+            from {
+                transform: translateX(-150px);
+            }
+
+            to {
+                transform: translateX(120vw);
+            }
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        nav a {
+            color: orange;
+            margin: 0 10px;
+        }
+
+        section {
+            margin-top: 50px;
+        }
+
+        h2 {
+            border-bottom: 1px solid #444;
+            padding-bottom: 5px;
+        }
+
+        .screenshot {
+            width: 100%;
+            max-width: 900px;
+            margin: 20px auto;
+            border: 2px dashed #666;
+            background: #222;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+            color: #888;
+        }
+
+        .screenshot img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .info-box {
+            background: #1b1b1b;
+            padding: 15px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bullet bullet1"></div>
+    <div class="bullet bullet2"></div>
+    <div class="bullet bullet3"></div>
+    <div class="bullet bullet4"></div>
+
+    <header>
+        <h1>3Dシューティング</h1>
+
+        <p>
+            3Dモデルを使ったアクションゲーム試作
+        </p>
+
+        <nav>
+            <a href="./index.html">TOP</a>
+            <a href="./works.html">作品集</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>スクリーンショット</h2>
+
+        <div class="screenshot">
+            スクリーンショットをここに配置
+
+            <!--
+            後でこう差し替える
+
+            <img src="./shooting01.png" alt="3Dシューティングのスクリーンショット">
+            -->
+        </div>
+    </section>
+
+    <section>
+        <h2>概要</h2>
+
+        <p>
+            3Dモデルでの移動、弾の発射、敵の出現処理などを学ぶために制作したシューティングゲームです。
+        </p>
+
+        <p>
+            3Dテトリスに続く試作として、アクション性のあるゲーム制作に挑戦しました。
+        </p>
+    </section>
+
+    <section>
+        <h2>作品情報</h2>
+
+        <div class="info-box">
+            <p><strong>ジャンル：</strong>3Dシューティング</p>
+            <p><strong>開発期間：</strong>約1か月</p>
+            <p><strong>制作位置づけ：</strong>3Dテトリスに続く試作作品</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>使用技術</h2>
+
+        <ul>
+            <li>C++</li>
+            <li>DxLib</li>
+            <li>Visual Studio</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>制作で学んだこと</h2>
+
+        <ul>
+            <li>3Dモデル（MV1）の表示方法</li>
+            <li>キャラクターの移動処理</li>
+            <li>弾の発射と管理</li>
+            <li>敵の種類分け</li>
+            <li>ステージ管理</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>今後の改善点</h2>
+
+        <ul>
+            <li>3Dモデルの改良</li>
+            <li>敵やステージ演出の追加</li>
+            <li>操作感の調整</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>ひとこと</h2>
+
+        <p>
+            3Dモデルを使ったアクションゲーム制作に初めて挑戦した作品です。
+            ここから、キャラクターを動かすゲーム制作の面白さを意識するようになりました。
+        </p>
+    </section>
+
+</body>
+
+</html>
