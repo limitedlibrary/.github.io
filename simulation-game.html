@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シミュレーションゲーム | 有限書庫</title>
+
+    <style>
+        body {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+            font-family: sans-serif;
+            line-height: 1.8;
+            color: white;
+            background-color: #101510;
+            background-image:
+                linear-gradient(rgba(80, 255, 120, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(80, 255, 120, 0.08) 1px, transparent 1px);
+            background-size: 40px 40px;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        nav a {
+            color: #7CFF8A;
+            margin: 0 10px;
+        }
+
+        section {
+            margin-top: 50px;
+        }
+
+        h2 {
+            border-bottom: 1px solid #444;
+            padding-bottom: 5px;
+        }
+
+        .screenshot {
+            width: 100%;
+            max-width: 900px;
+            margin: 20px auto;
+            border: 2px dashed #4c8f5c;
+            background: #1b1b1b;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+            color: #888;
+        }
+
+        .screenshot img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .info-box {
+            background: rgba(20, 30, 20, 0.9);
+            padding: 15px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>シミュレーションゲーム</h1>
+
+        <p>
+            3Dフィールド上でユニット配置を行う戦略シミュレーション試作
+        </p>
+
+        <nav>
+            <a href="./index.html">TOP</a>
+            <a href="./works.html">作品集</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>スクリーンショット</h2>
+
+        <div class="screenshot">
+            スクリーンショットをここに配置
+
+            <!--
+            後でこう差し替える
+
+            <img src="./simulation01.png" alt="シミュレーションゲームのスクリーンショット">
+            -->
+        </div>
+    </section>
+
+    <section>
+        <h2>概要</h2>
+
+        <p>
+            3Dフィールド上に味方ユニットを配置し、
+            ステージごとに戦闘準備を行う戦略シミュレーションゲームの試作です。
+        </p>
+
+        <p>
+            ユニットの配置範囲、ステージ管理、キャラクター情報の表示、
+            戦闘開始までの流れを実装しました。
+        </p>
+
+        <p>
+            Siv3Dを使った3D表現とUI制作、
+            Codexを活用した制作フローを試す目的で制作しました。
+        </p>
+    </section>
+
+    <section>
+        <h2>作品情報</h2>
+
+        <div class="info-box">
+            <p><strong>ジャンル：</strong>戦略シミュレーション</p>
+            <p><strong>開発期間：</strong>約1か月</p>
+            <p><strong>制作位置づけ：</strong>月刊試作の3作目</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>使用技術</h2>
+
+        <ul>
+            <li>C++</li>
+            <li>Siv3D</li>
+            <li>Visual Studio</li>
+            <li>Codex</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>制作で学んだこと</h2>
+
+        <ul>
+            <li>Codexを使った制作フロー</li>
+            <li>Siv3Dの導入と基本的な使い方</li>
+            <li>Siv3Dによる3D表示</li>
+            <li>3Dフィールド上でのユニット配置</li>
+            <li>ステージ管理</li>
+            <li>UI表示と操作処理</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>今後の改善点</h2>
+
+        <ul>
+            <li>3Dモデルの読み込み方法の整理</li>
+            <li>OBJ形式モデルの読み込み</li>
+            <li>戦闘パートの作り込み</li>
+            <li>ユニットやステージの種類追加</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>ひとこと</h2>
+
+        <p>
+            Siv3Dはサンプルやチュートリアルが豊富で、
+            試作だけで終わらせるよりも、月刊制作とは別枠でじっくり学びたいと感じた作品です。
+        </p>
+    </section>
+
+</body>
+
+</html>
