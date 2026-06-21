@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拠点開拓ゲーム | 有限書庫</title>
+
+    <style>
+        body {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+            font-family: sans-serif;
+            line-height: 1.8;
+            color: white;
+            background: #10140f;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(80, 160, 70, 0.25), transparent 25%),
+                radial-gradient(circle at 80% 60%, rgba(120, 90, 50, 0.25), transparent 25%);
+            z-index: -1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        nav a {
+            color: #9ee37d;
+            margin: 0 10px;
+        }
+
+        section {
+            margin-top: 50px;
+        }
+
+        h2 {
+            border-bottom: 1px solid #444;
+            padding-bottom: 5px;
+        }
+
+        .screenshot {
+            width: 100%;
+            max-width: 900px;
+            margin: 20px auto;
+            border: 2px dashed #6f8f5c;
+            background: #1b1b1b;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+            color: #888;
+        }
+
+        .screenshot img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .info-box {
+            background: rgba(25, 35, 20, 0.9);
+            padding: 15px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>拠点開拓ゲーム</h1>
+    <p>資源を集め、拠点を育てていく拠点育成シミュレーション</p>
+
+    <nav>
+        <a href="./index.html">TOP</a>
+        <a href="./works.html">作品集</a>
+    </nav>
+</header>
+
+<section>
+    <h2>スクリーンショット</h2>
+
+    <div class="screenshot">
+        <img src="./settlement01.png" alt="拠点開拓ゲームのスクリーンショット">
+    </div>
+</section>
+
+<section>
+    <h2>概要</h2>
+
+    <p>
+        資源を集めながら拠点を育て、敵の襲撃に対応していく拠点育成シミュレーションゲームです。
+    </p>
+
+    <p>
+        味方キャラクターに行動を指示し、食料・木材・石材などの資源を管理しながら、
+        拠点の維持と成長を目指します。
+    </p>
+
+    <p>
+        2D表現から2.5D表現への変換、味方の行動パターン、アイテム管理などを試す目的で制作しました。
+    </p>
+</section>
+
+<section>
+    <h2>作品情報</h2>
+
+    <div class="info-box">
+        <p><strong>ジャンル：</strong>拠点育成シミュレーション</p>
+        <p><strong>開発期間：</strong>約1か月</p>
+        <p><strong>制作位置づけ：</strong>月刊試作の4作目</p>
+    </div>
+</section>
+
+<section>
+    <h2>使用技術</h2>
+
+    <ul>
+        <li>C++</li>
+        <li>DxLib</li>
+        <li>Visual Studio</li>
+    </ul>
+</section>
+
+<section>
+    <h2>制作で学んだこと</h2>
+
+    <ul>
+        <li>2Dから2.5Dへの変換</li>
+        <li>アイテム管理</li>
+        <li>味方キャラクターの行動パターン制作</li>
+        <li>資源管理</li>
+        <li>拠点を中心にしたゲーム進行の設計</li>
+    </ul>
+</section>
+
+<section>
+    <h2>今後の改善点</h2>
+
+    <ul>
+        <li>敵の狙いが単調だったこと</li>
+        <li>資源管理が単調だったこと</li>
+        <li>調合要素を組み込めなかったこと</li>
+        <li>アクションやエフェクトなどの見栄え強化</li>
+        <li>BGMや演出面の強化</li>
+    </ul>
+</section>
+
+<section>
+    <h2>ひとこと</h2>
+
+    <p>
+        自分の限界を感じた制作でした。
+        どうすればゲームが面白くなるのか、ストーリーの作り方、アクション、エフェクト、BGMの大切さなど、
+        普段自分が何を面白いと感じているのかと向き合うきっかけになった作品です。
+    </p>
+</section>
+
+</body>
+
+</html>
