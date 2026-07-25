@@ -5,30 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3Dテトリス | 有限書庫</title>
+    <link rel="stylesheet" href="./style.css">
 
     <style>
 
-        body {
-            max-width: 1000px;
-            margin: auto;
-            padding: 20px;
-            font-family: sans-serif;
-            line-height: 1.8;
-            color: white;
-            background: #111;
-            position: relative;
-            overflow-x: hidden;
-        }
-
-        /* テトリス棒背景 */
+        /* テトリス棒背景（このページ固有の演出） */
 
         .falling-block {
             position: fixed;
             top: -150px;
             width: 30px;
             height: 120px;
-            background: cyan;
-            opacity: 0.15;
+            background: var(--color-accent);
+            opacity: 0.12;
             z-index: -1;
             animation: fall 8s linear infinite;
         }
@@ -56,53 +45,6 @@
             to {
                 transform: translateY(120vh);
             }
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        nav a {
-            color: cyan;
-            margin: 0 10px;
-        }
-
-        section {
-            margin-top: 60px;
-        }
-
-        h2 {
-            border-bottom: 1px solid #444;
-            padding-bottom: 5px;
-        }
-
-        .screenshot {
-            width: 100%;
-            max-width: 900px;
-        
-            margin: 20px auto;
-        
-            border: 2px dashed #666;
-        
-            background: #222;
-        
-            padding: 10px;
-        
-            box-sizing: border-box;
-        }
-        
-        .screenshot img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .info-box {
-
-            background: #1b1b1b;
-            padding: 15px;
-            border-radius: 8px;
         }
 
     </style>
@@ -232,6 +174,10 @@
         </p>
 
     </section>
+
+    <footer>
+        &copy; 有限書庫
+    </footer>
 
 </body>
 

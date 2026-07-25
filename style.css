@@ -1,0 +1,188 @@
+/* ==========================================================
+   有限書庫 共通スタイル
+   青を基調とした落ち着いたデザイン
+   ========================================================== */
+
+:root {
+    --color-bg: #0b1220;
+    --color-bg-soft: #0f1830;
+    --color-surface: #131f38;
+    --color-surface-soft: #182848;
+    --color-border: #26385c;
+    --color-text: #e4ebf7;
+    --color-text-muted: #8fa2c4;
+    --color-accent: #5b9dff;
+    --color-accent-soft: #9cc4ff;
+    --color-accent-dim: rgba(91, 157, 255, 0.15);
+    --max-width: 960px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 32px 20px 60px;
+    font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Segoe UI", sans-serif;
+    line-height: 1.8;
+    color: var(--color-text);
+    background: var(--color-bg);
+    background-image:
+        radial-gradient(circle at 15% 10%, rgba(91, 157, 255, 0.08), transparent 30%),
+        radial-gradient(circle at 85% 40%, rgba(91, 157, 255, 0.06), transparent 35%);
+    background-attachment: fixed;
+}
+
+/* ---------- header / nav ---------- */
+
+header {
+    text-align: center;
+    margin-bottom: 48px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+header h1 {
+    margin: 0 0 8px;
+    letter-spacing: 0.05em;
+    font-size: 2em;
+    color: #fff;
+}
+
+header p {
+    color: var(--color-text-muted);
+    margin: 0 0 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+nav a {
+    color: var(--color-accent-soft);
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+nav a:hover {
+    border-color: var(--color-accent);
+    background: var(--color-accent-dim);
+}
+
+/* ---------- sections ---------- */
+
+section {
+    margin-top: 48px;
+}
+
+h2 {
+    font-size: 1.3em;
+    color: #fff;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: var(--color-accent-soft);
+    margin-bottom: 8px;
+}
+
+a {
+    color: var(--color-accent-soft);
+}
+
+ul {
+    padding-left: 1.2em;
+}
+
+/* ---------- cards ---------- */
+
+.card,
+.work-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-top: 14px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover,
+.work-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+}
+
+.card h3,
+.work-card > a {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.work-card > a {
+    color: var(--color-accent-soft);
+    text-decoration: none;
+}
+
+.work-card > a:hover {
+    text-decoration: underline;
+}
+
+.status {
+    display: inline-block;
+    font-size: 0.8em;
+    color: var(--color-accent-soft);
+    background: var(--color-accent-dim);
+    padding: 2px 10px;
+    border-radius: 999px;
+    margin: 6px 0;
+}
+
+/* ---------- info box / screenshot (work detail pages) ---------- */
+
+.info-box {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: 16px 20px;
+    border-radius: 10px;
+}
+
+.screenshot {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    border: 2px dashed var(--color-border);
+    background: var(--color-surface);
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    color: var(--color-text-muted);
+    border-radius: 10px;
+}
+
+.screenshot img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+/* ---------- footer ---------- */
+
+footer {
+    margin-top: 64px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 0.85em;
+}
