@@ -1,19 +1,19 @@
 /* ==========================================================
    有限書庫 共通スタイル
-   青を基調とした落ち着いたデザイン
+   明るくクリーンなショップサイト風デザイン
    ========================================================== */
 
 :root {
-    --color-bg: #0b1220;
-    --color-bg-soft: #0f1830;
-    --color-surface: #131f38;
-    --color-surface-soft: #182848;
-    --color-border: #26385c;
-    --color-text: #e4ebf7;
-    --color-text-muted: #8fa2c4;
-    --color-accent: #5b9dff;
-    --color-accent-soft: #9cc4ff;
-    --color-accent-dim: rgba(91, 157, 255, 0.15);
+    --color-bg: #f7f6f3;
+    --color-surface: #ffffff;
+    --color-surface-soft: #fff6ea;
+    --color-border: #e6e2da;
+    --color-text: #262421;
+    --color-text-muted: #85807a;
+    --color-accent: #f2951b;
+    --color-accent-dark: #d97e0a;
+    --color-accent-soft: #fff0da;
+    --color-accent-dim: rgba(242, 149, 27, 0.12);
     --max-width: 960px;
 }
 
@@ -21,34 +21,38 @@
     box-sizing: border-box;
 }
 
+html {
+    background: var(--color-accent);
+}
+
 body {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 32px 20px 60px;
-    font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Segoe UI", sans-serif;
+    padding: 0 0 60px;
+    font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", "Segoe UI", sans-serif;
     line-height: 1.8;
     color: var(--color-text);
     background: var(--color-bg);
-    background-image:
-        radial-gradient(circle at 15% 10%, rgba(91, 157, 255, 0.08), transparent 30%),
-        radial-gradient(circle at 85% 40%, rgba(91, 157, 255, 0.06), transparent 35%);
-    background-attachment: fixed;
+    border-left: 1px solid var(--color-border);
+    border-right: 1px solid var(--color-border);
 }
 
 /* ---------- header / nav ---------- */
 
 header {
     text-align: center;
-    margin-bottom: 48px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 40px;
+    padding: 36px 20px 24px;
+    background: var(--color-surface);
+    border-bottom: 4px solid var(--color-accent);
 }
 
 header h1 {
     margin: 0 0 8px;
     letter-spacing: 0.05em;
-    font-size: 2em;
-    color: #fff;
+    font-size: 1.9em;
+    color: var(--color-text);
+    font-weight: 800;
 }
 
 header p {
@@ -64,40 +68,44 @@ nav {
 }
 
 nav a {
-    color: var(--color-accent-soft);
+    color: var(--color-text);
     text-decoration: none;
-    padding: 6px 14px;
+    font-weight: bold;
+    padding: 7px 16px;
     border-radius: 999px;
-    border: 1px solid transparent;
-    transition: border-color 0.2s ease, background 0.2s ease;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg);
+    transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
 
 nav a:hover {
     border-color: var(--color-accent);
-    background: var(--color-accent-dim);
+    background: var(--color-accent);
+    color: #fff;
 }
 
 /* ---------- sections ---------- */
 
 section {
-    margin-top: 48px;
+    margin-top: 44px;
+    padding: 0 24px;
 }
 
 h2 {
-    font-size: 1.3em;
-    color: #fff;
-    border-bottom: 1px solid var(--color-border);
-    padding-bottom: 8px;
+    font-size: 1.25em;
+    color: var(--color-text);
+    padding-left: 12px;
+    border-left: 6px solid var(--color-accent);
     margin-bottom: 20px;
 }
 
 h3 {
-    color: var(--color-accent-soft);
+    color: var(--color-accent-dark);
     margin-bottom: 8px;
 }
 
 a {
-    color: var(--color-accent-soft);
+    color: var(--color-accent-dark);
 }
 
 ul {
@@ -110,15 +118,16 @@ ul {
 .work-card {
     background: var(--color-surface);
     border: 1px solid var(--color-border);
-    border-radius: 10px;
+    border-radius: 14px;
     padding: 18px 20px;
     margin-top: 14px;
-    transition: border-color 0.2s ease, transform 0.2s ease;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .card:hover,
 .work-card:hover {
     border-color: var(--color-accent);
+    box-shadow: 0 6px 16px rgba(38, 36, 33, 0.08);
     transform: translateY(-2px);
 }
 
@@ -129,7 +138,7 @@ ul {
 }
 
 .work-card > a {
-    color: var(--color-accent-soft);
+    color: var(--color-accent-dark);
     text-decoration: none;
 }
 
@@ -139,10 +148,11 @@ ul {
 
 .status {
     display: inline-block;
-    font-size: 0.8em;
-    color: var(--color-accent-soft);
-    background: var(--color-accent-dim);
-    padding: 2px 10px;
+    font-size: 0.75em;
+    font-weight: bold;
+    color: #fff;
+    background: var(--color-accent);
+    padding: 3px 12px;
     border-radius: 999px;
     margin: 6px 0;
 }
@@ -150,10 +160,10 @@ ul {
 /* ---------- info box / screenshot (work detail pages) ---------- */
 
 .info-box {
-    background: var(--color-surface);
+    background: var(--color-surface-soft);
     border: 1px solid var(--color-border);
     padding: 16px 20px;
-    border-radius: 10px;
+    border-radius: 14px;
 }
 
 .screenshot {
@@ -166,21 +176,21 @@ ul {
     box-sizing: border-box;
     text-align: center;
     color: var(--color-text-muted);
-    border-radius: 10px;
+    border-radius: 14px;
 }
 
 .screenshot img {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 6px;
+    border-radius: 8px;
 }
 
 /* ---------- footer ---------- */
 
 footer {
     margin-top: 64px;
-    padding-top: 20px;
+    padding: 20px 24px 0;
     border-top: 1px solid var(--color-border);
     text-align: center;
     color: var(--color-text-muted);
