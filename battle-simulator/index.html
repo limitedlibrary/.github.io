@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle Simulator | 月刊試作録⑤ 3Dコマンドバトル試作</title>
+    <meta name="description" content="C++ / DxLibで制作中の3Dコマンドバトル試作「Battle Simulator」の制作記録・ポートフォリオページです。">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <a class="back-link" href="../works.html">&larr; 有限書庫 作品一覧へ</a>
+
+    <!-- ========== ヒーローセクション ========== -->
+    <header class="hero">
+        <div class="hero-inner">
+
+            <div class="tag-row">
+                <span class="tag">3Dコマンドバトル試作</span>
+                <span class="tag">C++ / DxLib</span>
+                <span class="tag">月刊試作録⑤</span>
+            </div>
+
+            <h1 class="hero-title">Battle Simulator</h1>
+            <p class="hero-sub">月刊試作録⑤ - 3Dコマンドバトル試作</p>
+            <p class="hero-copy">コマンドを選び、狙いを定め、パーティで戦う。3D空間の戦闘UIを研究する個人制作の試作記録です。</p>
+
+            <div class="shot-frame shot-frame--hero" data-caption="タイトル画面">
+                <img src="./assets/images/screenshot_title.png" alt="タイトル画面">
+                <div class="shot-frame__placeholder">
+                    <span class="shot-frame__icon">■</span>
+                    <span>タイトル画面</span>
+                    <small>assets/images/screenshot_title.png</small>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ========== 概要 ========== -->
+        <section id="overview" class="section">
+            <div class="section-inner">
+
+                <h2 class="section-title"><span>概要</span></h2>
+
+                <div class="panel">
+                    <p>
+                        「Battle Simulator」は、3D空間で敵と戦うコマンド選択式バトルの試作です。
+                        プレイヤーは複数のキャラクターを操作し、通常攻撃・ファイア・アイス・ヒールといったコマンドを選びながら戦闘を進めます。
+                    </p>
+                    <p>
+                        現時点では完成品ではなく、戦闘システムとUIの見せ方を検証するための試作段階です。
+                        ターゲット情報、パーティ情報、行動順、ブレイク値、戦闘ログといった要素を画面上にどう配置するかを研究しながら制作しています。
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========== ゲームの特徴 ========== -->
+        <section id="features" class="section">
+            <div class="section-inner">
+
+                <h2 class="section-title"><span>ゲームの特徴</span></h2>
+
+                <div class="feature-grid">
+
+                    <div class="panel feature-card">
+                        <span class="feature-card__icon">⚔</span>
+                        <h3>コマンド選択式バトル</h3>
+                        <p>通常攻撃・ファイア・アイス・ヒールなど、コマンドを選んで行動を決める古典的なバトル形式です。</p>
+                    </div>
+
+                    <div class="panel feature-card">
+                        <span class="feature-card__icon">◎</span>
+                        <h3>ターゲット情報表示</h3>
+                        <p>攻撃対象の情報を画面に表示し、狙う相手を分かりやすく選択できるUIを検証しています。</p>
+                    </div>
+
+                    <div class="panel feature-card">
+                        <span class="feature-card__icon">▤</span>
+                        <h3>行動順 / ORDER表示</h3>
+                        <p>キャラクターや敵の行動順を画面上部に並べて表示し、戦況を把握しやすくしています。</p>
+                    </div>
+
+                    <div class="panel feature-card">
+                        <span class="feature-card__icon">◈</span>
+                        <h3>ブレイク値システム</h3>
+                        <p>敵の弱点を突くことでブレイク値を蓄積し、有利に戦闘を進める仕組みを設計中です。</p>
+                    </div>
+
+                    <div class="panel feature-card">
+                        <span class="feature-card__icon">♥</span>
+                        <h3>パーティHP / MP管理</h3>
+                        <p>パーティ全体のHP・MPを常に確認しながら戦えるよう、情報表示のレイアウトを試作しています。</p>
+                    </div>
+
+                    <div class="panel feature-card">
+                        <span class="feature-card__icon">▣</span>
+                        <h3>クエスト選択と戦闘結果画面</h3>
+                        <p>挑戦するクエストを選び、戦闘後には結果画面で成果を確認できる一連の流れを実装しています。</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========== スクリーンショット ========== -->
+        <section id="gallery" class="section">
+            <div class="section-inner">
+
+                <h2 class="section-title"><span>スクリーンショット</span></h2>
+                <p class="section-lead">画像をクリックすると拡大表示できます。</p>
+
+                <div class="shot-grid">
+
+                    <button type="button" class="shot-card" data-caption="タイトル画面">
+                        <span class="shot-frame">
+                            <img src="./assets/images/screenshot_title.png" alt="タイトル画面">
+                            <span class="shot-frame__placeholder">
+                                <span class="shot-frame__icon">■</span>
+                                <span>タイトル画面</span>
+                                <small>screenshot_title.png</small>
+                            </span>
+                        </span>
+                        <span class="shot-card__label">タイトル画面</span>
+                    </button>
+
+                    <button type="button" class="shot-card" data-caption="クエスト選択画面">
+                        <span class="shot-frame">
+                            <img src="./assets/images/screenshot_quest.png" alt="クエスト選択画面">
+                            <span class="shot-frame__placeholder">
+                                <span class="shot-frame__icon">▣</span>
+                                <span>クエスト選択画面</span>
+                                <small>screenshot_quest.png</small>
+                            </span>
+                        </span>
+                        <span class="shot-card__label">クエスト選択画面</span>
+                    </button>
+
+                    <button type="button" class="shot-card" data-caption="戦闘画面 / コマンド選択">
+                        <span class="shot-frame">
+                            <img src="./assets/images/screenshot_battle_01.png" alt="戦闘画面 / コマンド選択">
+                            <span class="shot-frame__placeholder">
+                                <span class="shot-frame__icon">⚔</span>
+                                <span>戦闘画面 / コマンド選択</span>
+                                <small>screenshot_battle_01.png</small>
+                            </span>
+                        </span>
+                        <span class="shot-card__label">戦闘画面 / コマンド選択</span>
+                    </button>
+
+                    <button type="button" class="shot-card" data-caption="ターゲット選択と攻撃">
+                        <span class="shot-frame">
+                            <img src="./assets/images/screenshot_battle_02.png" alt="ターゲット選択と攻撃">
+                            <span class="shot-frame__placeholder">
+                                <span class="shot-frame__icon">◎</span>
+                                <span>ターゲット選択と攻撃</span>
+                                <small>screenshot_battle_02.png</small>
+                            </span>
+                        </span>
+                        <span class="shot-card__label">ターゲット選択と攻撃</span>
+                    </button>
+
+                    <button type="button" class="shot-card" data-caption="戦闘結果画面">
+                        <span class="shot-frame">
+                            <img src="./assets/images/screenshot_result.png" alt="戦闘結果画面">
+                            <span class="shot-frame__placeholder">
+                                <span class="shot-frame__icon">★</span>
+                                <span>戦闘結果画面</span>
+                                <small>screenshot_result.png</small>
+                            </span>
+                        </span>
+                        <span class="shot-card__label">戦闘結果画面</span>
+                    </button>
+
+                    <button type="button" class="shot-card" data-caption="メニュー・ステータス画面">
+                        <span class="shot-frame">
+                            <img src="./assets/images/screenshot_status.png" alt="メニュー・ステータス画面">
+                            <span class="shot-frame__placeholder">
+                                <span class="shot-frame__icon">▤</span>
+                                <span>メニュー・ステータス画面</span>
+                                <small>screenshot_status.png</small>
+                            </span>
+                        </span>
+                        <span class="shot-card__label">メニュー・ステータス画面</span>
+                    </button>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========== 戦闘システム紹介 ========== -->
+        <section id="battle-system" class="section">
+            <div class="section-inner">
+
+                <h2 class="section-title"><span>戦闘システム</span></h2>
+
+                <ol class="flow-list">
+                    <li>
+                        <span class="flow-list__index">01</span>
+                        <div>
+                            <h3>コマンドを選択する</h3>
+                            <p>通常攻撃・ファイア・アイス・ヒールなど、キャラクターごとに使えるコマンドの中から行動を選びます。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="flow-list__index">02</span>
+                        <div>
+                            <h3>ターゲットを選ぶ</h3>
+                            <p>コマンドを決めたら、画面に表示されたターゲット情報を見ながら攻撃対象の敵を選択します。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="flow-list__index">03</span>
+                        <div>
+                            <h3>攻撃・魔法でHPを削る</h3>
+                            <p>選んだコマンドとターゲットに応じて攻撃や魔法を発動し、敵のHPを削っていきます。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="flow-list__index">04</span>
+                        <div>
+                            <h3>弱点とブレイク値を利用する</h3>
+                            <p>敵の弱点属性を突くことでブレイク値を蓄積し、有利な状況を作りながら戦う方向で設計を進めています。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="flow-list__index">05</span>
+                        <div>
+                            <h3>今後：演出とアニメーションの強化</h3>
+                            <p>今後はエフェクト、キャラクターアニメーション、技ごとの演出を強化していく予定です。</p>
+                        </div>
+                    </li>
+                </ol>
+
+            </div>
+        </section>
+
+        <!-- ========== 制作で学んだこと ========== -->
+        <section id="devnotes" class="section">
+            <div class="section-inner">
+
+                <h2 class="section-title"><span>制作で学んだこと</span></h2>
+
+                <div class="panel">
+                    <p>
+                        今回の試作では、戦闘システムそのものだけでなく、UIや見た目の重要性を強く感じました。
+                        ターゲット情報やパーティ情報、行動順、ブレイク値といった情報をどう配置すれば戦況を直感的に把握できるのか、
+                        画面レイアウトを何度も試行錯誤しながら制作しています。
+                    </p>
+                    <p>
+                        また、3Dモデル・エフェクト・アニメーション制作の難しさにも直面しました。
+                        Blenderで作成した素材をゲーム内でどのように活用するか、DxLib上での読み込みや表示方法を含めて検討している段階です。
+                    </p>
+                    <p>
+                        制作を通じて、戦闘システムという「仕組み」と、UIやエフェクトといった「見た目」は分けて考える必要があると感じました。
+                        両方が噛み合って初めて、遊んでいて気持ちの良い戦闘になるということを学んでいます。
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========== 今後の改善予定 ========== -->
+        <section id="roadmap" class="section">
+            <div class="section-inner">
+
+                <h2 class="section-title"><span>今後の改善予定</span></h2>
+
+                <ul class="roadmap-list">
+                    <li>攻撃・魔法エフェクトの追加</li>
+                    <li>キャラクターアニメーションの追加</li>
+                    <li>ブレイク時の演出強化</li>
+                    <li>UIの視認性改善</li>
+                    <li>技ごとのタイムライン制御</li>
+                    <li>Blender製モデル・エフェクト素材の活用</li>
+                </ul>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== フッター ========== -->
+    <footer class="site-footer">
+        <div class="section-inner site-footer__inner">
+
+            <div class="site-footer__series">
+                <p class="site-footer__name">制作者：有限書庫</p>
+                <p>本作は「月刊試作録」シリーズの一作品です。</p>
+            </div>
+
+            <a class="site-footer__link" href="../works.html">作品一覧ページへ &rarr;</a>
+
+        </div>
+    </footer>
+
+    <!-- ========== 拡大表示モーダル ========== -->
+    <div id="lightbox" class="lightbox" hidden>
+        <div class="lightbox__backdrop" data-close></div>
+        <figure class="lightbox__content">
+            <button type="button" class="lightbox__close" data-close aria-label="閉じる">✕</button>
+            <img id="lightbox-img" src="" alt="">
+            <figcaption id="lightbox-caption"></figcaption>
+        </figure>
+    </div>
+
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>

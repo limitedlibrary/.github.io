@@ -10,94 +10,137 @@
 
 <body>
 
-<header>
-    <h1>拠点開拓ゲーム</h1>
-    <p>資源を集め、拠点を育てていく拠点育成シミュレーション</p>
+<div class="layout">
 
-    <nav>
-        <a href="./index.html">TOP</a>
-        <a href="./works.html">作品集</a>
-    </nav>
-</header>
+    <aside class="sidebar">
 
-<section>
-    <h2>スクリーンショット</h2>
+        <div class="site-brand">
+            <a href="./index.html">
+                <h1>有限書庫</h1>
+                <p class="tagline">個人ゲーム開発・試作記録サイト</p>
+            </a>
+        </div>
 
-    <div class="screenshot">
-        <img src="./settlement01.png" alt="拠点開拓ゲームのスクリーンショット">
-    </div>
-</section>
+        <nav class="tree-nav">
+            <p class="group-title">MENU</p>
+            <ul>
+                <li><a href="./index.html">TOP</a></li>
+                <li>
+                    <a href="./works.html">作品集</a>
+                    <ul>
+                        <li><a href="./tetris.html">3Dテトリス</a></li>
+                        <li><a href="./3D-shooting.html">3Dシューティング</a></li>
+                        <li><a href="./simulation-game.html">シミュレーションゲーム</a></li>
+                        <li><a href="./settlement-builder.html" class="current">拠点開拓ゲーム</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./works.html#tools">ツール</a>
+                    <ul>
+                        <li><a href="./mihiraki-merge.html">見開き結合くん</a></li>
+                    </ul>
+                </li>
+                <li><a href="./profile.html">プロフィール</a></li>
+            </ul>
+        </nav>
 
-<section>
-    <h2>概要</h2>
+        <div class="sidebar-links">
+            <a href="https://note.com/finite_archive" target="_blank" rel="noopener">note</a>
+            <a href="https://x.com/FiniteArchive" target="_blank" rel="noopener">X</a>
+            <a href="#">GitHub</a>
+        </div>
 
-    <p>
-        資源を集めながら拠点を育て、敵の襲撃に対応していく拠点育成シミュレーションゲームです。
-    </p>
+    </aside>
 
-    <p>
-        味方キャラクターに行動を指示し、食料・木材・石材などの資源を管理しながら、
-        拠点の維持と成長を目指します。
-    </p>
+    <main class="content">
 
-    <p>
-        2D表現から2.5D表現への変換、味方の行動パターン、アイテム管理などを試す目的で制作しました。
-    </p>
-</section>
+        <div class="page-head">
+            <h1>拠点開拓ゲーム</h1>
+            <p>資源を集め、拠点を育てていく拠点育成シミュレーション</p>
+        </div>
 
-<section>
-    <h2>作品情報</h2>
+        <section>
+            <h2>スクリーンショット</h2>
 
-    <div class="info-box">
-        <p><strong>ジャンル：</strong>拠点育成シミュレーション</p>
-        <p><strong>開発期間：</strong>約1か月</p>
-        <p><strong>制作位置づけ：</strong>月刊試作の4作目</p>
-    </div>
-</section>
+            <div class="screenshot">
+                <img src="./images/settlement01.png" alt="拠点開拓ゲームのスクリーンショット">
+            </div>
+        </section>
 
-<section>
-    <h2>使用技術</h2>
+        <section>
+            <h2>概要</h2>
 
-    <ul>
-        <li>C++</li>
-        <li>DxLib</li>
-        <li>Visual Studio</li>
-    </ul>
-</section>
+            <p>
+                資源を集めながら拠点を育て、敵の襲撃に対応していく拠点育成シミュレーションゲームです。
+            </p>
 
-<section>
-    <h2>制作で学んだこと</h2>
+            <p>
+                味方キャラクターに行動を指示し、食料・木材・石材などの資源を管理しながら、
+                拠点の維持と成長を目指します。
+            </p>
 
-    <ul>
-        <li>2Dから2.5Dへの変換</li>
-        <li>アイテム管理</li>
-        <li>味方キャラクターの行動パターン制作</li>
-        <li>資源管理</li>
-        <li>拠点を中心にしたゲーム進行の設計</li>
-    </ul>
-</section>
+            <p>
+                2D表現から2.5D表現への変換、味方の行動パターン、アイテム管理などを試す目的で制作しました。
+            </p>
+        </section>
 
-<section>
-    <h2>今後の改善点</h2>
+        <section>
+            <h2>作品情報</h2>
 
-    <ul>
-        <li>敵の狙いが単調だったこと</li>
-        <li>資源管理が単調だったこと</li>
-        <li>調合要素を組み込めなかったこと</li>
-        <li>アクションやエフェクトなどの見栄え強化</li>
-        <li>BGMや演出面の強化</li>
-    </ul>
-</section>
+            <div class="info-box">
+                <p><strong>ジャンル：</strong>拠点育成シミュレーション</p>
+                <p><strong>開発期間：</strong>約1か月</p>
+                <p><strong>制作位置づけ：</strong>月刊試作の4作目</p>
+            </div>
+        </section>
 
-<section>
-    <h2>ひとこと</h2>
+        <section>
+            <h2>使用技術</h2>
 
-    <p>
-        自分の限界を感じた制作でした。
-        どうすればゲームが面白くなるのか、ストーリーの作り方、アクション、エフェクト、BGMの大切さなど、
-        普段自分が何を面白いと感じているのかと向き合うきっかけになった作品です。
-    </p>
-</section>
+            <ul>
+                <li>C++</li>
+                <li>DxLib</li>
+                <li>Visual Studio</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>制作で学んだこと</h2>
+
+            <ul>
+                <li>2Dから2.5Dへの変換</li>
+                <li>アイテム管理</li>
+                <li>味方キャラクターの行動パターン制作</li>
+                <li>資源管理</li>
+                <li>拠点を中心にしたゲーム進行の設計</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>今後の改善点</h2>
+
+            <ul>
+                <li>敵の狙いが単調だったこと</li>
+                <li>資源管理が単調だったこと</li>
+                <li>調合要素を組み込めなかったこと</li>
+                <li>アクションやエフェクトなどの見栄え強化</li>
+                <li>BGMや演出面の強化</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>ひとこと</h2>
+
+            <p>
+                自分の限界を感じた制作でした。
+                どうすればゲームが面白くなるのか、ストーリーの作り方、アクション、エフェクト、BGMの大切さなど、
+                普段自分が何を面白いと感じているのかと向き合うきっかけになった作品です。
+            </p>
+        </section>
+
+    </main>
+
+</div>
 
 <footer>
     &copy; 有限書庫

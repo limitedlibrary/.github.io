@@ -18,7 +18,7 @@
             height: 120px;
             background: var(--color-accent);
             opacity: 0.12;
-            z-index: -1;
+            z-index: 0;
             animation: fall 8s linear infinite;
         }
 
@@ -57,123 +57,161 @@
     <div class="falling-block block2"></div>
     <div class="falling-block block3"></div>
 
-    <header>
+    <div class="layout">
 
-        <h1>3Dテトリス</h1>
+        <aside class="sidebar">
 
-        <p>
-            有限書庫 最初の完成作品
-        </p>
+            <div class="site-brand">
+                <a href="./index.html">
+                    <h1>有限書庫</h1>
+                    <p class="tagline">個人ゲーム開発・試作記録サイト</p>
+                </a>
+            </div>
 
-        <nav>
-            <a href="./index.html">TOP</a>
-            <a href="./works.html">作品集</a>
-        </nav>
+            <nav class="tree-nav">
+                <p class="group-title">MENU</p>
+                <ul>
+                    <li><a href="./index.html">TOP</a></li>
+                    <li>
+                        <a href="./works.html">作品集</a>
+                        <ul>
+                            <li><a href="./tetris.html" class="current">3Dテトリス</a></li>
+                            <li><a href="./3D-shooting.html">3Dシューティング</a></li>
+                            <li><a href="./simulation-game.html">シミュレーションゲーム</a></li>
+                            <li><a href="./settlement-builder.html">拠点開拓ゲーム</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="./works.html#tools">ツール</a>
+                        <ul>
+                            <li><a href="./mihiraki-merge.html">見開き結合くん</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./profile.html">プロフィール</a></li>
+                </ul>
+            </nav>
 
-    </header>
+            <div class="sidebar-links">
+                <a href="https://note.com/finite_archive" target="_blank" rel="noopener">note</a>
+                <a href="https://x.com/FiniteArchive" target="_blank" rel="noopener">X</a>
+                <a href="#">GitHub</a>
+            </div>
 
-    <section>
+        </aside>
 
-        <h2>スクリーンショット</h2>
+        <main class="content">
 
-        <div class="screenshot">
-            <img src="./images/tetris01.png" alt="3Dテトリスのスクリーンショット">
-        </div>
+            <div class="page-head">
+                <h1>3Dテトリス</h1>
+                <p>有限書庫 最初の完成作品</p>
+            </div>
 
-    </section>
+            <section>
 
-    <section>
+                <h2>スクリーンショット</h2>
 
-        <h2>概要</h2>
+                <div class="screenshot">
+                    <img src="./images/tetris01.png" alt="3Dテトリスのスクリーンショット">
+                </div>
 
-        <p>
-            プログラミング学習開始から約1か月のタイミングで制作した、
-            「3Dパズル」と「RPG」を組み合わせた試作ゲームです。
-        </p>
+            </section>
 
-        <p>
-            3D空間でテトリスを行いながら、
-            敵との戦闘や成長要素を組み合わせることを目標に制作しました。
-        </p>
+            <section>
 
-        <p>
-            現在見ると拙い部分も多くありますが、
-            個人開発を始めて最初の完成作品であり、
-            ゲーム制作の基礎を学ぶきっかけとなった作品です。
-        </p>
+                <h2>概要</h2>
 
-    </section>
+                <p>
+                    プログラミング学習開始から約1か月のタイミングで制作した、
+                    「3Dパズル」と「RPG」を組み合わせた試作ゲームです。
+                </p>
 
-    <section>
+                <p>
+                    3D空間でテトリスを行いながら、
+                    敵との戦闘や成長要素を組み合わせることを目標に制作しました。
+                </p>
 
-        <h2>作品情報</h2>
+                <p>
+                    現在見ると拙い部分も多くありますが、
+                    個人開発を始めて最初の完成作品であり、
+                    ゲーム制作の基礎を学ぶきっかけとなった作品です。
+                </p>
 
-        <div class="info-box">
+            </section>
 
-            <p><strong>ジャンル：</strong>3DパズルRPG</p>
-            <p><strong>開発期間：</strong>約1か月</p>
-            <p><strong>制作時期：</strong>ゲーム開発学習1か月目</p>
+            <section>
 
-        </div>
+                <h2>作品情報</h2>
 
-    </section>
+                <div class="info-box">
 
-    <section>
+                    <p><strong>ジャンル：</strong>3DパズルRPG</p>
+                    <p><strong>開発期間：</strong>約1か月</p>
+                    <p><strong>制作時期：</strong>ゲーム開発学習1か月目</p>
 
-        <h2>使用技術</h2>
+                </div>
 
-        <ul>
-            <li>C++</li>
-            <li>DxLib</li>
-            <li>Visual Studio</li>
-        </ul>
+            </section>
 
-    </section>
+            <section>
 
-    <section>
+                <h2>使用技術</h2>
 
-        <h2>制作で学んだこと</h2>
+                <ul>
+                    <li>C++</li>
+                    <li>DxLib</li>
+                    <li>Visual Studio</li>
+                </ul>
 
-        <ul>
+            </section>
 
-            <li>Visual Studioの導入</li>
-            <li>C++プロジェクトの作成方法</li>
-            <li>コンソールアプリからゲーム画面への移行</li>
-            <li>DxLibの導入方法</li>
-            <li>2D描画の基礎</li>
-            <li>3D描画の基礎</li>
-            <li>日本語フォント表示時のトラブル対応</li>
+            <section>
 
-        </ul>
+                <h2>制作で学んだこと</h2>
 
-    </section>
+                <ul>
 
-    <section>
+                    <li>Visual Studioの導入</li>
+                    <li>C++プロジェクトの作成方法</li>
+                    <li>コンソールアプリからゲーム画面への移行</li>
+                    <li>DxLibの導入方法</li>
+                    <li>2D描画の基礎</li>
+                    <li>3D描画の基礎</li>
+                    <li>日本語フォント表示時のトラブル対応</li>
 
-        <h2>今後の改善点</h2>
+                </ul>
 
-        <ul>
+            </section>
 
-            <li>敵の種類追加</li>
-            <li>クエストシステムの実装</li>
-            <li>アイテムの種類追加</li>
-            <li>ゲームバランス調整</li>
-            <li>3D空間の演出強化</li>
+            <section>
 
-        </ul>
+                <h2>今後の改善点</h2>
 
-    </section>
+                <ul>
 
-    <section>
+                    <li>敵の種類追加</li>
+                    <li>クエストシステムの実装</li>
+                    <li>アイテムの種類追加</li>
+                    <li>ゲームバランス調整</li>
+                    <li>3D空間の演出強化</li>
 
-        <h2>ひとこと</h2>
+                </ul>
 
-        <p>
-            有限書庫の最初の完成作品。
-            ここから個人ゲーム開発の活動を開始しました。
-        </p>
+            </section>
 
-    </section>
+            <section>
+
+                <h2>ひとこと</h2>
+
+                <p>
+                    有限書庫の最初の完成作品。
+                    ここから個人ゲーム開発の活動を開始しました。
+                </p>
+
+            </section>
+
+        </main>
+
+    </div>
 
     <footer>
         &copy; 有限書庫

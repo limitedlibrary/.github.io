@@ -97,30 +97,73 @@
 </head>
 <body>
 
-<header>
-    <h1>見開き結合くん</h1>
-    <p>見開きページの画像をまとめて結合・回転・保存できるツール</p>
+<div class="layout">
 
-    <nav>
-        <a href="./index.html">TOP</a>
-        <a href="./works.html">作品集</a>
-    </nav>
-</header>
+    <aside class="sidebar">
 
-<section>
-    <div class="controls">
-        <label><input type="checkbox" id="resize-check" checked> 50%サイズに縮小</label>
-        <label style="margin-left: 20px;"><input type="checkbox" id="global-swap"> デフォルトを右開き（入替）にする</label>
-    </div>
+        <div class="site-brand">
+            <a href="./index.html">
+                <h1>有限書庫</h1>
+                <p class="tagline">個人ゲーム開発・試作記録サイト</p>
+            </a>
+        </div>
 
-    <div id="drop-zone">ここに画像をまとめてドロップ！</div>
-    <input type="file" id="file-input" accept="image/*" multiple style="display:none;">
+        <nav class="tree-nav">
+            <p class="group-title">MENU</p>
+            <ul>
+                <li><a href="./index.html">TOP</a></li>
+                <li>
+                    <a href="./works.html">作品集</a>
+                    <ul>
+                        <li><a href="./tetris.html">3Dテトリス</a></li>
+                        <li><a href="./3D-shooting.html">3Dシューティング</a></li>
+                        <li><a href="./simulation-game.html">シミュレーションゲーム</a></li>
+                        <li><a href="./settlement-builder.html">拠点開拓ゲーム</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./works.html#tools">ツール</a>
+                    <ul>
+                        <li><a href="./mihiraki-merge.html" class="current">見開き結合くん</a></li>
+                    </ul>
+                </li>
+                <li><a href="./profile.html">プロフィール</a></li>
+            </ul>
+        </nav>
 
-    <div id="preview-grid" class="grid"></div>
-    <button id="zip-btn">🎁 ZIPでまとめて保存</button>
+        <div class="sidebar-links">
+            <a href="https://note.com/finite_archive" target="_blank" rel="noopener">note</a>
+            <a href="https://x.com/FiniteArchive" target="_blank" rel="noopener">X</a>
+            <a href="#">GitHub</a>
+        </div>
 
-    <canvas id="canvas" style="display:none;"></canvas>
-</section>
+    </aside>
+
+    <main class="content">
+
+        <div class="page-head">
+            <h1>見開き結合くん</h1>
+            <p>見開きページの画像をまとめて結合・回転・保存できるツール</p>
+        </div>
+
+        <section>
+            <div class="controls">
+                <label><input type="checkbox" id="resize-check" checked> 50%サイズに縮小</label>
+                <label style="margin-left: 20px;"><input type="checkbox" id="global-swap"> デフォルトを右開き（入替）にする</label>
+            </div>
+
+            <div id="drop-zone">ここに画像をまとめてドロップ！</div>
+            <input type="file" id="file-input" accept="image/*" multiple style="display:none;">
+
+            <div id="preview-grid" class="grid"></div>
+            <button id="zip-btn">🎁 ZIPでまとめて保存</button>
+
+            <canvas id="canvas" style="display:none;"></canvas>
+        </section>
+
+    </main>
+
+</div>
 
 <footer>
     &copy; 有限書庫

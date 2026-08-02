@@ -10,79 +10,96 @@
 
 <body>
 
-<header>
+<div class="layout">
 
-    <h1>有限書庫</h1>
+    <aside class="sidebar">
 
-    <p>
-        個人ゲーム開発・試作記録サイト
-    </p>
+        <div class="site-brand">
+            <a href="./index.html">
+                <h1>有限書庫</h1>
+                <p class="tagline">個人ゲーム開発・試作記録サイト</p>
+            </a>
+        </div>
 
-    <nav>
-        <a href="./works.html">作品一覧</a>
-        <a href="#">開発日誌</a>
-        <a href="./profile.html">プロフィール</a>
-    </nav>
+        <nav class="tree-nav">
+            <p class="group-title">MENU</p>
+            <ul>
+                <li><a href="./index.html" class="current">TOP</a></li>
+                <li>
+                    <a href="./works.html">作品集</a>
+                    <ul>
+                        <li><a href="./tetris.html">3Dテトリス</a></li>
+                        <li><a href="./3D-shooting.html">3Dシューティング</a></li>
+                        <li><a href="./simulation-game.html">シミュレーションゲーム</a></li>
+                        <li><a href="./settlement-builder.html">拠点開拓ゲーム</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./works.html">ツール</a>
+                    <ul>
+                        <li><a href="./mihiraki-merge.html">見開き結合くん</a></li>
+                    </ul>
+                </li>
+                <li><a href="./profile.html">プロフィール</a></li>
+            </ul>
+        </nav>
 
-</header>
+        <div class="sidebar-links">
+            <a href="https://note.com/finite_archive" target="_blank" rel="noopener">note</a>
+            <a href="https://x.com/FiniteArchive" target="_blank" rel="noopener">X</a>
+            <a href="#">GitHub</a>
+        </div>
 
-<section>
+    </aside>
 
-    <h2>最新作品</h2>
+    <main class="content">
 
-    <div class="card">
+        <section>
 
-        <h3>3Dテトリス</h3>
+            <h2>最新作品</h2>
 
-        <p>
-            C++で制作した3Dテトリス。
-        </p>
+            <div class="work-list">
+                <div class="work-row">
+                    <div class="thumb">スクリーンショット準備中</div>
+                    <div class="body">
+                        <a href="./battle-simulator/index.html">Battle Simulator</a>
+                        <span class="status">試作中</span>
+                        <p>月刊試作録⑤。C++ / DxLibで制作中の3Dコマンドバトル試作です。</p>
+                    </div>
+                </div>
+            </div>
 
-        <a href="./tetris.html">
-            詳細を見る
-        </a>
+        </section>
 
-    </div>
+        <section>
 
-</section>
+            <h2>制作中</h2>
 
-<section>
+            <div class="card">
 
-    <h2>制作中</h2>
+                <h3>防衛開拓記</h3>
 
-    <div class="card">
+                <p>
+                    開拓シミュレーション＋防衛ゲーム制作中。
+                </p>
 
-        <h3>防衛開拓記</h3>
+            </div>
 
-        <p>
-            開拓シミュレーション＋防衛ゲーム制作中。
-        </p>
+        </section>
 
-    </div>
+        <section>
 
-</section>
+            <h2>更新情報</h2>
 
-<section>
+            <ul class="log-list">
+                <li><span class="date">2026/05/30</span><span>サイト公開</span></li>
+            </ul>
 
-    <h2>外部リンク</h2>
+        </section>
 
-    <ul>
-        <li><a href="https://note.com/finite_archive">note</a></li>
-        <li><a href="https://x.com/FiniteArchive">X</a></li>
-        <li><a href="#">GitHub</a></li>
-    </ul>
+    </main>
 
-</section>
-
-<section>
-
-    <h2>更新履歴</h2>
-
-    <ul>
-        <li>2026/05/30 サイト公開</li>
-    </ul>
-
-</section>
+</div>
 
 <footer>
     &copy; 有限書庫

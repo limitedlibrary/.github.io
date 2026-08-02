@@ -18,7 +18,7 @@
             height: 4px;
             background: var(--color-accent);
             opacity: 0.15;
-            z-index: -1;
+            z-index: 0;
             animation: shoot 5s linear infinite;
         }
 
@@ -62,95 +62,129 @@
     <div class="bullet bullet3"></div>
     <div class="bullet bullet4"></div>
 
-    <header>
-        <h1>3Dシューティング</h1>
+    <div class="layout">
 
-        <p>
-            3Dモデルを使ったアクションゲーム試作
-        </p>
+        <aside class="sidebar">
 
-        <nav>
-            <a href="./index.html">TOP</a>
-            <a href="./works.html">作品集</a>
-        </nav>
-    </header>
+            <div class="site-brand">
+                <a href="./index.html">
+                    <h1>有限書庫</h1>
+                    <p class="tagline">個人ゲーム開発・試作記録サイト</p>
+                </a>
+            </div>
 
-    <section>
-        <h2>スクリーンショット</h2>
+            <nav class="tree-nav">
+                <p class="group-title">MENU</p>
+                <ul>
+                    <li><a href="./index.html">TOP</a></li>
+                    <li>
+                        <a href="./works.html">作品集</a>
+                        <ul>
+                            <li><a href="./tetris.html">3Dテトリス</a></li>
+                            <li><a href="./3D-shooting.html" class="current">3Dシューティング</a></li>
+                            <li><a href="./simulation-game.html">シミュレーションゲーム</a></li>
+                            <li><a href="./settlement-builder.html">拠点開拓ゲーム</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="./works.html#tools">ツール</a>
+                        <ul>
+                            <li><a href="./mihiraki-merge.html">見開き結合くん</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./profile.html">プロフィール</a></li>
+                </ul>
+            </nav>
 
-        <div class="screenshot">
-            スクリーンショットをここに配置
+            <div class="sidebar-links">
+                <a href="https://note.com/finite_archive" target="_blank" rel="noopener">note</a>
+                <a href="https://x.com/FiniteArchive" target="_blank" rel="noopener">X</a>
+                <a href="#">GitHub</a>
+            </div>
 
-            <!--
-            後でこう差し替える
+        </aside>
 
-            <img src="./shooting01.png" alt="3Dシューティングのスクリーンショット">
-            -->
-        </div>
-    </section>
+        <main class="content">
 
-    <section>
-        <h2>概要</h2>
+            <div class="page-head">
+                <h1>3Dシューティング</h1>
+                <p>3Dモデルを使ったアクションゲーム試作</p>
+            </div>
 
-        <p>
-            3Dモデルでの移動、弾の発射、敵の出現処理などを学ぶために制作したシューティングゲームです。
-        </p>
+            <section>
+                <h2>スクリーンショット</h2>
 
-        <p>
-            3Dテトリスに続く試作として、アクション性のあるゲーム制作に挑戦しました。
-        </p>
-    </section>
+                <div class="screenshot">
+                    <img src="./images/3D-shooting01.png" alt="3Dシューティングのスクリーンショット">
+                </div>
+            </section>
 
-    <section>
-        <h2>作品情報</h2>
+            <section>
+                <h2>概要</h2>
 
-        <div class="info-box">
-            <p><strong>ジャンル：</strong>3Dシューティング</p>
-            <p><strong>開発期間：</strong>約1か月</p>
-            <p><strong>制作位置づけ：</strong>3Dテトリスに続く試作作品</p>
-        </div>
-    </section>
+                <p>
+                    3Dモデルでの移動、弾の発射、敵の出現処理などを学ぶために制作したシューティングゲームです。
+                </p>
 
-    <section>
-        <h2>使用技術</h2>
+                <p>
+                    3Dテトリスに続く試作として、アクション性のあるゲーム制作に挑戦しました。
+                </p>
+            </section>
 
-        <ul>
-            <li>C++</li>
-            <li>DxLib</li>
-            <li>Visual Studio</li>
-        </ul>
-    </section>
+            <section>
+                <h2>作品情報</h2>
 
-    <section>
-        <h2>制作で学んだこと</h2>
+                <div class="info-box">
+                    <p><strong>ジャンル：</strong>3Dシューティング</p>
+                    <p><strong>開発期間：</strong>約1か月</p>
+                    <p><strong>制作位置づけ：</strong>3Dテトリスに続く試作作品</p>
+                </div>
+            </section>
 
-        <ul>
-            <li>3Dモデル（MV1）の表示方法</li>
-            <li>キャラクターの移動処理</li>
-            <li>弾の発射と管理</li>
-            <li>敵の種類分け</li>
-            <li>ステージ管理</li>
-        </ul>
-    </section>
+            <section>
+                <h2>使用技術</h2>
 
-    <section>
-        <h2>今後の改善点</h2>
+                <ul>
+                    <li>C++</li>
+                    <li>DxLib</li>
+                    <li>Visual Studio</li>
+                </ul>
+            </section>
 
-        <ul>
-            <li>3Dモデルの改良</li>
-            <li>敵やステージ演出の追加</li>
-            <li>操作感の調整</li>
-        </ul>
-    </section>
+            <section>
+                <h2>制作で学んだこと</h2>
 
-    <section>
-        <h2>ひとこと</h2>
+                <ul>
+                    <li>3Dモデル（MV1）の表示方法</li>
+                    <li>キャラクターの移動処理</li>
+                    <li>弾の発射と管理</li>
+                    <li>敵の種類分け</li>
+                    <li>ステージ管理</li>
+                </ul>
+            </section>
 
-        <p>
-            3Dモデルを使ったアクションゲーム制作に初めて挑戦した作品です。
-            ここから、キャラクターを動かすゲーム制作の面白さを意識するようになりました。
-        </p>
-    </section>
+            <section>
+                <h2>今後の改善点</h2>
+
+                <ul>
+                    <li>3Dモデルの改良</li>
+                    <li>敵やステージ演出の追加</li>
+                    <li>操作感の調整</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>ひとこと</h2>
+
+                <p>
+                    3Dモデルを使ったアクションゲーム制作に初めて挑戦した作品です。
+                    ここから、キャラクターを動かすゲーム制作の面白さを意識するようになりました。
+                </p>
+            </section>
+
+        </main>
+
+    </div>
 
     <footer>
         &copy; 有限書庫

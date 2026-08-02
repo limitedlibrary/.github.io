@@ -23,105 +23,139 @@
 
 <body>
 
-    <header>
-        <h1>シミュレーションゲーム</h1>
+    <div class="layout">
 
-        <p>
-            3Dフィールド上でユニット配置を行う戦略シミュレーション試作
-        </p>
+        <aside class="sidebar">
 
-        <nav>
-            <a href="./index.html">TOP</a>
-            <a href="./works.html">作品集</a>
-        </nav>
-    </header>
+            <div class="site-brand">
+                <a href="./index.html">
+                    <h1>有限書庫</h1>
+                    <p class="tagline">個人ゲーム開発・試作記録サイト</p>
+                </a>
+            </div>
 
-    <section>
-        <h2>スクリーンショット</h2>
+            <nav class="tree-nav">
+                <p class="group-title">MENU</p>
+                <ul>
+                    <li><a href="./index.html">TOP</a></li>
+                    <li>
+                        <a href="./works.html">作品集</a>
+                        <ul>
+                            <li><a href="./tetris.html">3Dテトリス</a></li>
+                            <li><a href="./3D-shooting.html">3Dシューティング</a></li>
+                            <li><a href="./simulation-game.html" class="current">シミュレーションゲーム</a></li>
+                            <li><a href="./settlement-builder.html">拠点開拓ゲーム</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="./works.html#tools">ツール</a>
+                        <ul>
+                            <li><a href="./mihiraki-merge.html">見開き結合くん</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./profile.html">プロフィール</a></li>
+                </ul>
+            </nav>
 
-        <div class="screenshot">
-            スクリーンショットをここに配置
+            <div class="sidebar-links">
+                <a href="https://note.com/finite_archive" target="_blank" rel="noopener">note</a>
+                <a href="https://x.com/FiniteArchive" target="_blank" rel="noopener">X</a>
+                <a href="#">GitHub</a>
+            </div>
 
-            <!--
-            後でこう差し替える
+        </aside>
 
-            <img src="./simulation01.png" alt="シミュレーションゲームのスクリーンショット">
-            -->
-        </div>
-    </section>
+        <main class="content">
 
-    <section>
-        <h2>概要</h2>
+            <div class="page-head">
+                <h1>シミュレーションゲーム</h1>
+                <p>3Dフィールド上でユニット配置を行う戦略シミュレーション試作</p>
+            </div>
 
-        <p>
-            3Dフィールド上に味方ユニットを配置し、
-            ステージごとに戦闘準備を行う戦略シミュレーションゲームの試作です。
-        </p>
+            <section>
+                <h2>スクリーンショット</h2>
 
-        <p>
-            ユニットの配置範囲、ステージ管理、キャラクター情報の表示、
-            戦闘開始までの流れを実装しました。
-        </p>
+                <div class="screenshot">
+                    <img src="./images/simulation-game01.png" alt="シミュレーションゲームのスクリーンショット">
+                </div>
+            </section>
 
-        <p>
-            Siv3Dを使った3D表現とUI制作、
-            Codexを活用した制作フローを試す目的で制作しました。
-        </p>
-    </section>
+            <section>
+                <h2>概要</h2>
 
-    <section>
-        <h2>作品情報</h2>
+                <p>
+                    3Dフィールド上に味方ユニットを配置し、
+                    ステージごとに戦闘準備を行う戦略シミュレーションゲームの試作です。
+                </p>
 
-        <div class="info-box">
-            <p><strong>ジャンル：</strong>戦略シミュレーション</p>
-            <p><strong>開発期間：</strong>約1か月</p>
-            <p><strong>制作位置づけ：</strong>月刊試作の3作目</p>
-        </div>
-    </section>
+                <p>
+                    ユニットの配置範囲、ステージ管理、キャラクター情報の表示、
+                    戦闘開始までの流れを実装しました。
+                </p>
 
-    <section>
-        <h2>使用技術</h2>
+                <p>
+                    Siv3Dを使った3D表現とUI制作、
+                    Codexを活用した制作フローを試す目的で制作しました。
+                </p>
+            </section>
 
-        <ul>
-            <li>C++</li>
-            <li>Siv3D</li>
-            <li>Visual Studio</li>
-            <li>Codex</li>
-        </ul>
-    </section>
+            <section>
+                <h2>作品情報</h2>
 
-    <section>
-        <h2>制作で学んだこと</h2>
+                <div class="info-box">
+                    <p><strong>ジャンル：</strong>戦略シミュレーション</p>
+                    <p><strong>開発期間：</strong>約1か月</p>
+                    <p><strong>制作位置づけ：</strong>月刊試作の3作目</p>
+                </div>
+            </section>
 
-        <ul>
-            <li>Codexを使った制作フロー</li>
-            <li>Siv3Dの導入と基本的な使い方</li>
-            <li>Siv3Dによる3D表示</li>
-            <li>3Dフィールド上でのユニット配置</li>
-            <li>ステージ管理</li>
-            <li>UI表示と操作処理</li>
-        </ul>
-    </section>
+            <section>
+                <h2>使用技術</h2>
 
-    <section>
-        <h2>今後の改善点</h2>
+                <ul>
+                    <li>C++</li>
+                    <li>Siv3D</li>
+                    <li>Visual Studio</li>
+                    <li>Codex</li>
+                </ul>
+            </section>
 
-        <ul>
-            <li>3Dモデルの読み込み方法の整理</li>
-            <li>OBJ形式モデルの読み込み</li>
-            <li>戦闘パートの作り込み</li>
-            <li>ユニットやステージの種類追加</li>
-        </ul>
-    </section>
+            <section>
+                <h2>制作で学んだこと</h2>
 
-    <section>
-        <h2>ひとこと</h2>
+                <ul>
+                    <li>Codexを使った制作フロー</li>
+                    <li>Siv3Dの導入と基本的な使い方</li>
+                    <li>Siv3Dによる3D表示</li>
+                    <li>3Dフィールド上でのユニット配置</li>
+                    <li>ステージ管理</li>
+                    <li>UI表示と操作処理</li>
+                </ul>
+            </section>
 
-        <p>
-            Siv3Dはサンプルやチュートリアルが豊富で、
-            試作だけで終わらせるよりも、月刊制作とは別枠でじっくり学びたいと感じた作品です。
-        </p>
-    </section>
+            <section>
+                <h2>今後の改善点</h2>
+
+                <ul>
+                    <li>3Dモデルの読み込み方法の整理</li>
+                    <li>OBJ形式モデルの読み込み</li>
+                    <li>戦闘パートの作り込み</li>
+                    <li>ユニットやステージの種類追加</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>ひとこと</h2>
+
+                <p>
+                    Siv3Dはサンプルやチュートリアルが豊富で、
+                    試作だけで終わらせるよりも、月刊制作とは別枠でじっくり学びたいと感じた作品です。
+                </p>
+            </section>
+
+        </main>
+
+    </div>
 
     <footer>
         &copy; 有限書庫
